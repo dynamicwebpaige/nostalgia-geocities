@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoCities 2000 Web Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Press+Start+2P&family=VT323&display=swap');
+      
+      body {
+        background-color: #000080; /* Windows 95 Desktop Blue */
+        font-family: 'MS Sans Serif', 'Segoe UI', Tahoma, sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* Custom Scrollbar for that extra 2000s feel */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #c0c0c0;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #808080;
+        border: 2px outset #ffffff;
+      }
+
+      .win95-box {
+        background: #c0c0c0;
+        border: 2px solid;
+        border-top-color: #dfdfdf;
+        border-left-color: #dfdfdf;
+        border-right-color: #000000;
+        border-bottom-color: #000000;
+        box-shadow: 1px 1px 0px 0px #000000;
+      }
+
+      .win95-inset {
+        background: #ffffff;
+        border: 2px solid;
+        border-top-color: #808080;
+        border-left-color: #808080;
+        border-right-color: #ffffff;
+        border-bottom-color: #ffffff;
+      }
+
+      .win95-btn {
+        background: #c0c0c0;
+        border: 2px solid;
+        border-top-color: #ffffff;
+        border-left-color: #ffffff;
+        border-right-color: #000000;
+        border-bottom-color: #000000;
+        active {
+          border-top-color: #000000;
+          border-left-color: #000000;
+          border-right-color: #ffffff;
+          border-bottom-color: #ffffff;
+        }
+      }
+      
+      .blink {
+        animation: blinker 1s linear infinite;
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      
+      .marquee-content {
+        display: inline-block;
+        animation: marquee 10s linear infinite;
+      }
+      
+      @keyframes marquee {
+        0% { transform: translate(100%, 0); }
+        100% { transform: translate(-100%, 0); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

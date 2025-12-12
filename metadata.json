@@ -1,0 +1,7 @@
+{
+  "name": "GeoCities 2000 Web Builder",
+  "description": "A nostalgic web construction kit that turns you into a Y2K icon.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
